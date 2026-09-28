@@ -1,0 +1,12 @@
+{
+  "format": "elisa-collection",
+  "version": 1,
+  "id": "bccc8f3e-83a2-4381-9fe6-e5c63686d251",
+  "name": "Flujo: Runt - Fasecolda",
+  "description": "Generada desde el flujo **Flujo: Runt - Fasecolda**. Ejecuta las peticiones en orden (1, 2, 3…).\n\nCada paso guarda sus salidas como variables globales para los siguientes: `{{id}}`, `{{postId}}`.",
+  "order": [
+    "1-get-productos.request.json",
+    "2-actualizar-productos.request.json",
+    "3-consulta-h-siniestros-fasecolda.request.json"
+  ]
+}

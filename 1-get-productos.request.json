@@ -1,0 +1,45 @@
+{
+  "id": "d608ac87-fcc6-468c-b3f1-1fef6277b0c6",
+  "name": "1. Get Productos",
+  "description": "",
+  "event": [
+    {
+      "listen": "test",
+      "script": {
+        "exec": [
+          "// Generado desde el flujo «Flujo: Runt - Fasecolda»: guarda las salidas como variables globales",
+          "var __body; try { __body = pm.response.json(); } catch (e) { __body = undefined; }",
+          "function __path(obj, keys) { for (var i = 0; i < keys.length; i++) { if (obj === null || obj === undefined) return undefined; obj = obj[keys[i]]; } return obj; }",
+          "function __header(name) { var h = pm.response.headers; if (h && typeof h.get === 'function') return h.get(name); for (var k in h) { if (k.toLowerCase() === name.toLowerCase()) return h[k]; } return undefined; }",
+          "function __text(v) { return v === null || v === undefined ? '' : typeof v === 'object' ? JSON.stringify(v) : String(v); }",
+          "if (pm.response.code < 400) {",
+          "  pm.globals.set(\"id\", __text(__path(__body, [\"0\",\"id\"])));",
+          "  pm.globals.set(\"postId\", __text(__path(__body, [\"0\",\"postId\"])));",
+          "}"
+        ],
+        "type": "text/javascript"
+      }
+    }
+  ],
+  "request": {
+    "method": "POST",
+    "url": {
+      "raw": "https://jsonplaceholder.typicode.com/comments",
+      "query": []
+    },
+    "header": [
+      {
+        "description": "",
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "body": null,
+    "auth": {
+      "type": "bearer",
+      "bearer": {
+        "token": ""
+      }
+    }
+  }
+}

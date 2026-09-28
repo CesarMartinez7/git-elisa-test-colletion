@@ -1,0 +1,71 @@
+{
+  "id": "7559f041-e1c2-414f-a708-618256d37371",
+  "name": "2. Actualizar Productos",
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "exec": [
+          "// Generado desde el flujo «Flujo: Runt - Fasecolda»: entradas de este paso",
+          "function __fill(v) { return String(v).replace(/\\{\\{\\s*([^{}\\s]+)\\s*\\}\\}/g, function (m, k) { var g = pm.globals.get(k); return g === undefined || g === null ? m : g; }); }",
+          "pm.globals.set(\"id\", __fill(\"{{id}}\"));",
+          "pm.globals.set(\"postId\", __fill(\"{{postId}}\"));"
+        ],
+        "type": "text/javascript"
+      }
+    }
+  ],
+  "request": {
+    "url": {
+      "raw": "https://jsonplaceholder.typicode.com/posts/1"
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": {
+        "token": "{{azure_token}}"
+      }
+    },
+    "body": {
+      "raw": "{\"input\":{\"placa\":\"NOK573\",\"motor\":\"\",\"chasis\":\"\"}}",
+      "mode": "raw",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    },
+    "header": [
+      {
+        "description": "",
+        "key": "x-correlation-id",
+        "value": "{{x-correlation-id}}"
+      },
+      {
+        "description": "",
+        "key": "mun-app",
+        "value": "{{mun-app}}"
+      },
+      {
+        "description": "",
+        "key": "mun-ext-user",
+        "value": "{{mun-ext-user}}"
+      },
+      {
+        "description": "",
+        "key": "mun-op",
+        "value": "{{mun-op}}"
+      },
+      {
+        "description": "",
+        "key": "mun-timestamp",
+        "value": "{{mun-timestamp}}"
+      },
+      {
+        "description": "",
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "method": "PUT"
+  }
+}
