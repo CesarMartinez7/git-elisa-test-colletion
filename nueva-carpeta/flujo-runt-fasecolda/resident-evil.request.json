@@ -1,0 +1,9 @@
+{
+  "id": "646d641f-da91-40c6-b04e-627632df3a1d",
+  "name": "Resident Evil",
+  "request": {
+    "method": "GET",
+    "url": "new-endpoint",
+    "body": null
+  }
+}

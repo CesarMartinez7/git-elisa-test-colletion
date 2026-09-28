@@ -1,0 +1,57 @@
+{
+  "id": "ab8b119e-19a9-40d0-9dfb-b8db8ad9e116",
+  "name": "3. Consulta H-siniestros Fasecolda",
+  "request": {
+    "url": {
+      "raw": "https://jsonplaceholder.typicode.com/posts/"
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": {
+        "token": "{{azure_token}}"
+      }
+    },
+    "body": {
+      "raw": "{\"input\":{\"placa\":\"DMV991\",\"motor\":\"\",\"chasis\":\"\"}}",
+      "mode": "raw",
+      "options": {
+        "raw": {
+          "language": "json"
+        }
+      }
+    },
+    "header": [
+      {
+        "description": "",
+        "key": "x-correlation-id",
+        "value": "{{x-correlation-id}}"
+      },
+      {
+        "description": "",
+        "key": "mun-app",
+        "value": "{{mun-app}}"
+      },
+      {
+        "description": "",
+        "key": "mun-ext-user",
+        "value": "{{mun-ext-user}}"
+      },
+      {
+        "description": "",
+        "key": "mun-op",
+        "value": "{{mun-op}}"
+      },
+      {
+        "description": "",
+        "key": "mun-timestamp",
+        "value": "{{mun-timestamp}}"
+      },
+      {
+        "description": "",
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "method": "DELETE"
+  }
+}
