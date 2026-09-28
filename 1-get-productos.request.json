@@ -22,11 +22,17 @@
     }
   ],
   "request": {
-    "method": "POST",
     "url": {
       "raw": "https://jsonplaceholder.typicode.com/comments",
       "query": []
     },
+    "auth": {
+      "type": "bearer",
+      "bearer": {
+        "token": ""
+      }
+    },
+    "body": null,
     "header": [
       {
         "description": "",
@@ -34,12 +40,6 @@
         "value": "application/json"
       }
     ],
-    "body": null,
-    "auth": {
-      "type": "bearer",
-      "bearer": {
-        "token": ""
-      }
-    }
+    "method": "POST"
   }
 }
