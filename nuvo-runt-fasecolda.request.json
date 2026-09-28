@@ -1,0 +1,9 @@
+{
+  "id": "50b0c013-a8b7-47d2-aa1b-ee7927a3113e",
+  "name": "NUvo Runt Fasecolda",
+  "request": {
+    "method": "GET",
+    "url": "new-endpoint",
+    "body": null
+  }
+}
